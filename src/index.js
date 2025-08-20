@@ -1,5 +1,8 @@
 import "./styles.css";
 import map from "./assets/images/map-marker.svg";
+import humid from "./assets/images/humidity-svgrepo-com.svg";
+import dewimg from "./assets/images/dew-svgrepo-com.svg";
+import windimg from "./assets/images/wind-svgrepo-com.svg";
 
 const inputLocation = document.querySelector("#location");
 const enterButton = document.querySelector(".locationButton");
@@ -93,15 +96,33 @@ function showInfo(condition, temp, feelslike, icon, humidity, dew, windspeed,res
 
     const otherValues = document.createElement("div");
     otherValues.classList.add("otherValues");
-    let value1 = document.createTextNode(`Humidity : ${humidity} %`);
-    otherValues.appendChild(value1);
-    otherValues.appendChild(document.createElement('br'));
-    let value2 = document.createTextNode(`Dew : ${dew}`);
-    otherValues.appendChild(value2);
-    otherValues.appendChild(document.createElement('br'));
-    let value3 = document.createTextNode(`WindSpeed : ${windspeed} mph`);
-    otherValues.appendChild(value3);
-    otherValues.appendChild(document.createElement('br'));
+    const humidDiv = document.createElement("div");
+    humidDiv.classList.add("otherDiv");
+    const humidImg = document.createElement("img");
+    humidImg.src = humid;
+    humidDiv.appendChild(humidImg);
+    let value1 = document.createTextNode("p");
+    value1.textContent= `Humidity : ${humidity} %`;
+    humidDiv.appendChild(value1);
+    otherValues.appendChild(humidDiv);
+    const dewDiv = document.createElement("div");
+    dewDiv.classList.add("otherDiv");
+    const dewImg = document.createElement("img");
+    dewImg.src = dewimg;
+    dewDiv.appendChild(dewImg);
+    let value2 = document.createTextNode("p");
+    value2.textContent= `Dew : ${dew}`;
+    dewDiv.appendChild(value2);
+    otherValues.appendChild(dewDiv);
+    const windDiv = document.createElement("div");
+    windDiv.classList.add("otherDiv");
+    const windImg = document.createElement("img");
+    windImg.src = windimg;
+    windDiv.appendChild(windImg);
+    let value3 = document.createTextNode("p");
+    value3.textContent= `WindSpeed : ${windspeed} mph`;
+    windDiv.appendChild(value3);
+    otherValues.appendChild(windDiv);
     currentDay.appendChild(otherValues);
 
     infoDiv.appendChild(currentDay);
