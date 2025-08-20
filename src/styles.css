@@ -1,0 +1,138 @@
+html, body{
+    font-family:'Times New Roman', Times, serif;
+    background: linear-gradient(45deg, rgb(141, 6, 238)   , rgb(137, 102, 6));
+    min-height: 100%;
+    /* min-width: 95%; */
+}
+.mainHeader{
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputlabeltext{
+    color: white;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#location{
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color:  rgb(137, 102, 6);
+}
+
+#location:focus{
+    outline: none;
+}
+
+.locationButton{
+    padding: 10px;
+    background-color:  rgb(164, 139, 66);
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    font-weight: 550;
+}
+
+.locationButton:hover, .locationButton:focus{
+    background-color: rgb(141, 6, 238);
+
+}
+
+.infoDiv{
+    padding: 10px;
+    color: whitesmoke;
+    width: 50vw;
+    text-align: center;    
+    background-color: rgba(223, 169, 165, 0.4);
+    margin: 10px auto;
+    border: none;
+    border-radius: 20px;
+}
+
+.addres{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addresDateDiv p{
+    margin-top: 0;
+}
+
+.currentDay{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.conditionDiv{
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(141, 6, 238, 0.185);
+    border: none;
+    border-radius: 20px;
+}
+
+.conditionDiv img{
+    margin: 10px;
+}
+
+.otherValues{
+    background-color: rgba(141, 6, 238, 0.185);
+    text-align: center;
+    padding: 60px 30px;
+    border: none;
+    border-radius: 20px;
+}
+
+.forecastCards{
+    display: flex;
+    gap: 20px;
+}
+
+.newDay{
+    padding: 10px;
+    background-color: rgba(141, 6, 238, 0.185);
+    border: none;
+    border-radius: 20px;
+}
+
+.dayImg{
+    width: 40px;
+    height: 30px;
+    margin:0;
+}
+
+.errorMsg{
+    padding: 10px;
+    color: whitesmoke;
+    width: 50vw;
+    text-align: center;    
+    background-color: rgba(223, 169, 165, 0.4);
+    margin: 10px auto;
+    border: none;
+    border-radius: 20px;
+}
+
+.icon{
+    color: #f5f5f5;
+    width: 50px;
+    height: 50px;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
